@@ -5,7 +5,8 @@ const addressSchema = new Schema(
     firstName: String,
     lastName: String,
     email: String,
-    phone: String,
+    phone_1: String,
+    phone_2: String,
     flat: String,
     apartment: String,
     landmark: String,
@@ -14,6 +15,7 @@ const addressSchema = new Schema(
     state: String,
     country: String,
     pin_code: String,
+    user: { type: Schema.Types.ObjectId, ref: "User" },
   },
   { timestamps: true, versionKey: false }
 );
